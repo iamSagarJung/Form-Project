@@ -1,0 +1,58 @@
+.form-container1 {
+    width: 85%;
+    margin: auto;
+    background-color: rgba(179, 168, 168, 0.125);
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+  
+  label {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  .title {
+    text-align: center;
+    color: rgb(66, 66, 183);
+  }
+  .form-container1 input {
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: rgba(210, 241, 254, 0.359);
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    border-bottom: 3px solid rgb(98, 194, 194);
+    outline: none;
+    font-size: 0.9rem;
+    margin: 0.7rem 0;
+  }
+  .box1,
+  .box2,
+  .box3 {
+    padding: 1rem;
+  }
+  .box1 input,
+  .box3 input {
+    width: 100%;
+  }
+  .line {
+    width: 100%;
+    background-color: black;
+    height: 0.15rem;
+  }
+  
+  .shaded {
+    background-color: rgb(203, 200, 200);
+  }
+  .shaded p,
+  h4 {
+    padding: 0.5rem 1rem;
+  }
+  
+  .checkbox {
+    padding: 0 1rem;
+    margin-top: 1rem;
+    color: rgb(66, 66, 183);
+  }
+  

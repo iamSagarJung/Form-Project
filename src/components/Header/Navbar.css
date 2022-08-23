@@ -1,0 +1,33 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(213, 231, 231);
+}
+.navbar h2{
+    margin-left:2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+img{
+    height:4rem;
+    width:10rem;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 1rem;
+}
+li{
+    margin:0 .7rem;
+    font-weight: 600;
+    color:rgb(125, 104, 104);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+li:hover{
+    color:rgb(33, 33, 70)
+}
+
+.link{
+    text-decoration: none;
+}
