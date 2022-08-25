@@ -1,38 +1,63 @@
-import React from "react";
-import "./Navbar.css";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "bulma/css/bulma.min.css";
+import "../../App.css"
 
-const Navbar = () => {
+export default function Navbar() {
+  const [isActive, setisActive] = useState(false);
+
   return (
-    <div className="navbar">
-      <img src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_db19166c75710883691a33de7418ade1/grepsr.png"></img>
-      <ul className="forms">
-        <Link className="link" to="/form1">
-          <li> Form 1</li>
-        </Link>
+    <nav
+      className="navbar is-primary is-shadow"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div className="navbar-brand image px-5 py-4">
+        <div className="navbar-item">
+        </div>
 
-        <Link className="link" to="/form2">
-          <li>Form 2</li>
-        </Link>
-
-        <Link className="link" to="/form3">
-          <li>Form 3</li>
-        </Link>
-
-        <Link className="link" to="/form4">
-          <li>Form 4</li>
-        </Link>
-
-        <Link className="link" to="/form5">
-          <li>Form 5</li>
-        </Link>
-
-        <Link className="link" to="/form6">
-          <li>Form 6</li>
-        </Link>
-      </ul>
-    </div>
+        <div
+          onClick={() => {
+            setisActive(!isActive);
+          }}
+          role="button"
+          className={`navbar-burger burger ${isActive ? "is-active" : ""}`}
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div
+        id="navbarBasicExample"
+        className={`navbar-menu ${isActive ? "is-active" : ""}`}
+      >
+        <div className="navbar-end">
+          <div className="navbar-item">
+            <Link className="navbar-item is-size-5" to="form1">
+              Form 1
+            </Link>
+            <Link className="navbar-item is-size-5" to="form2">
+              Form 2
+            </Link>
+            <Link className="navbar-item is-size-5" to="form3">
+              Form 3
+            </Link>
+            <Link className="navbar-item is-size-5" to="form4">
+              Form 4
+            </Link>
+            <Link className="navbar-item is-size-5" to="form5">
+              Form 5
+            </Link>
+            <Link className="navbar-item is-size-5" to="form6">
+              Form 6
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
-};
-
-export default Navbar;
+}

@@ -1,10 +1,12 @@
 import React from 'react'
+import 'bulma/css/bulma.min.css';
+
 
 const Form3 = () => {
   return (
-    <div>
-      form 3 container
-    </div>
+    <>
+     
+    </>
   )
 }
 

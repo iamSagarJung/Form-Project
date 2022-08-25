@@ -1,12 +1,10 @@
-import React from 'react'
+import React from "react";
+import "bulma/css/bulma.min.css";
 
 const Form5 = () => {
-  return (
-    <div>
-      form 5 container
-      
-    </div>
-  )
-}
+  return <>
+  
+  </>;
+};
 
-export default Form5
+export default Form5;

@@ -1,72 +1,87 @@
 import React from "react";
-import "./Form1.css";
+import Button from "../UI/Button";
+import Checkbox from "../UI/Checkbox";
+import Comment from "../UI/Comment";
+import Input from "../UI/Input";
+import Radio from "../UI/Radio";
+import Shaded from "../UI/Shaded";
+import Title from "../UI/Title";
 
 const Form1 = () => {
   return (
     <>
-      <h2 className="title">HR Requirement Form</h2>
-      <form className="form-container1">
-        <div className="box1">
-          <label htmlFor="position">Requested Position Title</label>
-          <input type="text" id="position" name="position"></input>
-
-          <label htmlFor="department">Department Name</label>
-          <input type="text" id="department" name="department" />
-
-          <label htmlFor="Rdate">Requested Date</label>
-          <input type="date" id="Rdate" name="Rdate" />
+      <h2 className="title has-text-centered mt-4 ">HR Requirement</h2>
+      <div className=" my-6 mx-6 px-0 box">
+        <div className="box1 px-5">
+          <Input>Requested Position Title</Input>
+          <Input>Department Name</Input>
+          <Input type="date">Requested Date</Input>
         </div>
 
-        <div className="line"></div>
+        <hr></hr>
 
-        <div className="box2">
-          <label className="title" htmlFor="employment-type1">
-            Employment Time
-          </label>
-          <br></br>
-          <input type="radio" name="employment-type" value="Full Time" />
-          Full Time<br></br>
-          <input type="radio" name="employment-type" value="Part Time" />
-          Part Time
+        {/* employment type */}
+        <div className="field px-5">
+          <Title>Employment Type</Title>
+          <Radio>Full Time</Radio>
+          <Radio>Part Time</Radio>
+        </div>
+        <hr></hr>
+
+    {/* Requirement Reason */}
+        <Shaded>
+          <Title>Requirement Reason</Title>
+          (New or updated job descriptions must be attached/mentioned for all
+          positions in Annex I)
+        </Shaded>
+
+        <hr></hr>
+
+        {/* vacant position */}
+
+        <div className="px-5">
+          <Checkbox>Vacant Position</Checkbox>
+          <Input>Name of Current vacant Position</Input>
+          <Input>Current pay grade/range</Input>
+          <Input>Recommended pay grade/range </Input>
         </div>
 
-        <div className="line"></div>
-        <div className="shaded">
-          <h4 className="title">Requirement Reason</h4>
-          <p>
-            (New or updated job descriptions must be attached/mentioned for all
-            positions in Annex I)
-          </p>
+        <hr></hr>
+
+        {/* New position */}
+
+        <div className="px-5">
+          <Checkbox>
+            New position (Already included in Workforce Planning)
+          </Checkbox>
+          <Input>Name of NEW position</Input>
+          <Input>Budgeted pay grade/rang</Input>
+          <Input>Recommended pay grade/range </Input>
         </div>
-        <div className="line"></div>
+        <hr></hr>
 
-        <h3 className="checkbox ">
-          <input type="checkbox" name="" value="Vacant Position" /> Vacant
-          Position
-        </h3>
-
-        <div className="box3">
-          <label htmlFor="Cposition">Name of CURRENT vacant position</label>
-          <br></br>
-          <input type="text" id="Cposition " name="Cposition " />
-          <br></br>
-
-          <label htmlFor="Cpay">Current pay grade/range</label>
-          <br></br>
-          <input type="text" id="Cpay " name="Cpay " />
-          <br></br>
-
-          <label htmlFor="Cposition">Name of CURRENT vacant position</label>
-          <br></br>
-          <input type="text" id="Rpay " name="Cposition " />
-          <br></br>
-
-          <label htmlFor="Cposition">Recommended pay grade/range</label>
-          <br></br>
-          <input type="text" id="Rpay " name="Rpay " />
-          <br></br>
+        <div className="px-5">
+          <Checkbox>New position (Not included in Workforce Planning)</Checkbox>
+          <Input>Name of NEW position</Input>
+          <Input>Recommended pay grade/range_</Input>
         </div>
-      </form>
+        <hr></hr>
+
+        <Shaded>
+          <Title>Position information/justification</Title>
+          (Indicate what changes were made to the job description or provide
+          justification for the new position.)
+        </Shaded>
+
+        <hr></hr>
+
+        <Comment placeholder="please type here" />
+
+        <hr></hr>
+        <div className="px-5">
+      <Button>Submit</Button>
+      </div>
+      </div>
     </>
   );
 };
