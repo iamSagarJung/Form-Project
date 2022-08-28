@@ -1,6 +1,8 @@
 import React from "react";
+import Box from "../UI/Box";
 import Button from "../UI/Button";
 import Checkbox from "../UI/Checkbox";
+import Column from "../UI/Column";
 import Comment from "../UI/Comment";
 import Input from "../UI/Input";
 import Radio from "../UI/Radio";
@@ -10,11 +12,18 @@ import Title from "../UI/Title";
 const Form1 = () => {
   return (
     <>
-      <h2 className="title has-text-centered mt-4 ">HR Requirement</h2>
-      <div className=" my-6 mx-6 px-0 box">
-        <div className="box1 px-5">
-          <Input>Requested Position Title</Input>
-          <Input>Department Name</Input>
+      <Box>
+        <h2 className="title has-text-centered mt-4 ">HR Requirement</h2>
+        <div className="px-5">
+          <div className="columns">
+            <Column>
+              <Input>Requested Position Title</Input>
+            </Column>
+
+            <Column>
+              <Input>Department Name</Input>
+            </Column>
+          </div>
           <Input type="date">Requested Date</Input>
         </div>
 
@@ -23,12 +32,12 @@ const Form1 = () => {
         {/* employment type */}
         <div className="field px-5">
           <Title>Employment Type</Title>
-          <Radio>Full Time</Radio>
-          <Radio>Part Time</Radio>
+          <Radio> Full Time</Radio>
+          <Radio> Part Time</Radio>
         </div>
         <hr></hr>
 
-    {/* Requirement Reason */}
+        {/* Requirement Reason */}
         <Shaded>
           <Title>Requirement Reason</Title>
           (New or updated job descriptions must be attached/mentioned for all
@@ -40,9 +49,16 @@ const Form1 = () => {
         {/* vacant position */}
 
         <div className="px-5">
-          <Checkbox>Vacant Position</Checkbox>
-          <Input>Name of Current vacant Position</Input>
-          <Input>Current pay grade/range</Input>
+          <Checkbox> Vacant Position</Checkbox>
+          <div className="columns">
+            <Column>
+              <Input>Name of Current vacant Position</Input>
+            </Column>
+
+            <Column>
+              <Input>Current pay grade/range</Input>
+            </Column>
+          </div>
           <Input>Recommended pay grade/range </Input>
         </div>
 
@@ -52,18 +68,37 @@ const Form1 = () => {
 
         <div className="px-5">
           <Checkbox>
+            {" "}
             New position (Already included in Workforce Planning)
           </Checkbox>
-          <Input>Name of NEW position</Input>
-          <Input>Budgeted pay grade/rang</Input>
+          <div className="columns">
+            <Column>
+              <Input>Name of NEW position</Input>
+            </Column>
+            <Column>
+              <Input>Budgeted pay grade/rang</Input>
+            </Column>
+          </div>
           <Input>Recommended pay grade/range </Input>
         </div>
         <hr></hr>
 
+        {/* Comments */}
+
         <div className="px-5">
-          <Checkbox>New position (Not included in Workforce Planning)</Checkbox>
-          <Input>Name of NEW position</Input>
-          <Input>Recommended pay grade/range_</Input>
+          <Checkbox>
+            {" "}
+            New position (Not included in Workforce Planning)
+          </Checkbox>
+          <div className="columns">
+            <Column>
+              <Input>Name of NEW position</Input>
+            </Column>
+
+            <Column>
+              <Input>Recommended pay grade/range_</Input>
+            </Column>
+          </div>
         </div>
         <hr></hr>
 
@@ -75,13 +110,13 @@ const Form1 = () => {
 
         <hr></hr>
 
-        <Comment placeholder="please type here" />
+        <Comment placeholder="please type here" className="px-5" />
 
         <hr></hr>
-        <div className="px-5">
-      <Button>Submit</Button>
-      </div>
-      </div>
+        <div className="px-5 has-text-centered">
+          <Button className="button is-link">Submit</Button>
+        </div>
+      </Box>
     </>
   );
 };

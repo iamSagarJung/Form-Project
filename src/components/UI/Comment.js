@@ -3,11 +3,12 @@ import React from "react";
 const Comment = (props) => {
   return (
     <>
-      <div className="px-5">
-        <div class="field">
-          <div class="control">
+      <div className={props.className}>
+        <div className="field">
+          <label className="label">{props.children}</label>
+          <div className="control">
             <textarea
-              class="textarea"
+              className="textarea"
               placeholder={props.placeholder}
             ></textarea>
           </div>

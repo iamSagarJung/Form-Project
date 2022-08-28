@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="navbar is-primary is-shadow"
+      className="navbar is-primary  is-fixed-top"
       role="navigation"
       aria-label="main navigation"
     >
@@ -21,7 +21,7 @@ export default function Navbar() {
             setisActive(!isActive);
           }}
           role="button"
-          className={`navbar-burger burger ${isActive ? "is-active" : ""}`}
+          className={`navbar-burger burger  ${isActive ? "is-active" : ""}`}
           aria-label="menu"
           aria-expanded="false"
           data-target="navbarBasicExample"

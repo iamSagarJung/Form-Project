@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
 
 const Title = (props) => {
   return (
     <>
-  <h1 className="is-size-4  has-text-weight-bold">{props.children}</h1>
+      <div
+        className={`is-size-4  has-text-weight-bold py-5 ${props.className}`}
+      >
+        {props.children}
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Title
+export default Title;
