@@ -17,19 +17,20 @@ const Form1 = () => {
         <div className="px-5">
           <div className="columns">
             <Column>
-              <Input>Requested Position Title</Input>
+              <Input placeholder="Enter Requested Position" >Requested Position Title</Input>
             </Column>
 
             <Column>
-              <Input>Department Name</Input>
+              <Input placeholder="Enter Department Name" >Department Name</Input>
             </Column>
           </div>
-          <Input type="date">Requested Date</Input>
+          <Input placeholder="enter"  type="date">Requested Date</Input>
         </div>
 
         <hr></hr>
 
-        {/* employment type */}
+        {/* ---------------------employment type--------------------- */}
+
         <div className="field px-5">
           <Title>Employment Type</Title>
           <Radio> Full Time</Radio>
@@ -37,7 +38,8 @@ const Form1 = () => {
         </div>
         <hr></hr>
 
-        {/* Requirement Reason */}
+        {/* ---------------------Requirement Reason--------------------- */}
+
         <Shaded>
           <Title>Requirement Reason</Title>
           (New or updated job descriptions must be attached/mentioned for all
@@ -46,25 +48,25 @@ const Form1 = () => {
 
         <hr></hr>
 
-        {/* vacant position */}
+        {/* -----------------------vacant position---------------------- */}
 
         <div className="px-5">
           <Checkbox> Vacant Position</Checkbox>
           <div className="columns">
             <Column>
-              <Input>Name of Current vacant Position</Input>
+              <Input placeholder="Enter Name of Current vacant Position" >Name of Current vacant Position</Input>
             </Column>
 
             <Column>
-              <Input>Current pay grade/range</Input>
+              <Input placeholder="Enter Current pay grade" >Current pay grade/range</Input>
             </Column>
           </div>
-          <Input>Recommended pay grade/range </Input>
+          <Input placeholder="Enter Recommended pay grade" >Recommended pay grade/range </Input>
         </div>
 
         <hr></hr>
 
-        {/* New position */}
+        {/* -----------------New position------------------ */}
 
         <div className="px-5">
           <Checkbox>
@@ -73,30 +75,29 @@ const Form1 = () => {
           </Checkbox>
           <div className="columns">
             <Column>
-              <Input>Name of NEW position</Input>
+              <Input placeholder="Enter Name of New  Position" >Name of NEW position</Input>
             </Column>
             <Column>
-              <Input>Budgeted pay grade/rang</Input>
+              <Input placeholder="Enter  pay grade" >Budgeted pay grade/rang</Input>
             </Column>
           </div>
-          <Input>Recommended pay grade/range </Input>
+          <Input placeholder="Enter Recommended pay grade" >Recommended pay grade/range </Input>
         </div>
         <hr></hr>
 
-        {/* Comments */}
+        {/*--------------Comments---------------- */}
 
         <div className="px-5">
           <Checkbox>
-            {" "}
             New position (Not included in Workforce Planning)
           </Checkbox>
           <div className="columns">
             <Column>
-              <Input>Name of NEW position</Input>
+              <Input placeholder="Enter Name of New Position" >Name of NEW position</Input>
             </Column>
 
             <Column>
-              <Input>Recommended pay grade/range_</Input>
+              <Input placeholder="Enter Recommended pay grade" >Recommended pay grade/range_</Input>
             </Column>
           </div>
         </div>
@@ -113,8 +114,57 @@ const Form1 = () => {
         <Comment placeholder="please type here" className="px-5" />
 
         <hr></hr>
+
+ {/* ------------------Approving Authoritied----------------- */}
+
+ <div className="px-5">
+      <Title className="is-underlined">Approving Authorities</Title>
+      <div className="columns">
+        <Column>
+          <Input placeholder="Hiring Manager" >Hiring Manager</Input>
+        </Column>
+
+        <Column>
+          <Input  type="date">Date</Input>
+        </Column>
+      </div>
+
+      <div className="columns">
+        <Column>
+          <Input placeholder="Head of Department" >Head of Department</Input>
+        </Column>
+
+        <Column>
+          <Input type="date">Date</Input>
+        </Column>
+      </div>
+
+      <div className="columns">
+        <Column>
+          <Input placeholder="HR" >HR</Input>
+        </Column>
+
+        <Column>
+          <Input placeholder="enter"  type="date">Date</Input>
+        </Column>
+      </div>
+
+      <div className="columns">
+        <Column>
+          <Input placeholder="CEO/FCO" >CEO/FCO</Input>
+        </Column>
+
+        <Column>
+          <Input placeholder="enter"  type="date">Date</Input>
+        </Column>
+      </div>
+
+      <p className="has-text-centered has-text-weight-bold my-5">
+        Annex I (Attach Job Description
+      </p>
         <div className="px-5 has-text-centered">
           <Button className="button is-link">Submit</Button>
+        </div>
         </div>
       </Box>
     </>

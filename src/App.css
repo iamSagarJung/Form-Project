@@ -4,3 +4,16 @@
     background-size: cover;
     width: 152px;
   }
+
+ 
+
+  @media screen and (min-width: 1480px) {
+    .container{
+      display: block;
+      max-width: 70%;
+      margin:0 auto;
+    }
+    .navbar-item{
+      margin-right:5rem;
+    }
+  }

@@ -5,57 +5,65 @@ import Title from "../UI/Title";
 import Column from "../UI/Column";
 import Input from "../UI/Input";
 import Button from "../UI/Button";
+import BudgetItemTable from "../Tables/BudgetItemTable";
+import InternalPurposeTable from "../Tables/InternalPurposeTable";
+import Comment from "../UI/Comment";
+
 
 const Form3 = () => {
-  return (
-    <Box className="px-5">
-      <Title className="is-underlined">Approving Authorities</Title>
-      <div className="columns">
-        <Column>
-          <Input>Hiring Manager</Input>
-        </Column>
+  return    <Box className="px-5">
+ 
+  {/* ----------TEAM BUDGET APPROVAL FORM--------- */}
+  <Title className="has-text-centered">TEAM BUDGET APPROVAL FORM</Title>
+  <div className="columns">
+    <Column>
+      <Input placeholder="Enter Team Name" >Team Name</Input>
+    </Column>
+    <Column>
+      <Input placeholder="Enter No.of participants" >No.of participants</Input>
+    </Column>
+  </div>
 
-        <Column>
-          <Input type="date">Date</Input>
-        </Column>
-      </div>
+  <div className="columns">
+    <Column>
+      <Input type="date">Event Date</Input>
+    </Column>
+    <Column>
+      <Input placeholder="Enter Event Location" >Event Location</Input>
+    </Column>
+  </div>
 
-      <div className="columns">
-        <Column>
-          <Input>Head of Department</Input>
-        </Column>
+  <Input placeholder="Enter Participants Names" >Participants Names</Input>
+  <Input placeholder="Enter Occasion " >Occasion</Input>
 
-        <Column>
-          <Input type="date">Date</Input>
-        </Column>
-      </div>
+  {/*---------- Budget Items-------- */}
+  <Title className="has-text-centered is-underlined">BUDGET ITEMS</Title>
+  <BudgetItemTable />
 
-      <div className="columns">
-        <Column>
-          <Input>HR</Input>
-        </Column>
+  {/* -----------Approval-------- */}
+  <Title className="has-text-centered is-underlined">APPROVAL</Title>
+  <div className="columns">
+    <Column>
+      <Input placeholder="Enter here" >Manager</Input>
+    </Column>
+    <Column>
+      <Input placeholder="Enter here">HR</Input>
+    </Column>
+  </div>
+  <Input placeholder="Enter " >Finance</Input>
 
-        <Column>
-          <Input type="date">Date</Input>
-        </Column>
-      </div>
 
-      <div className="columns">
-        <Column>
-          <Input>CEO/FCO</Input>
-        </Column>
+  <Title className="has-text-centered">For Internal Purpose</Title>
 
-        <Column>
-          <Input type="date">Date</Input>
-        </Column>
-      </div>
+<InternalPurposeTable />
 
-      <p className="has-text-centered has-text-weight-bold my-5">
-        Annex I (Attach Job Description
-      </p>
-      <Button>Submit</Button>
-    </Box>
-  );
+{/* -----------Comments--------- */}
+<Comment>Remarks:</Comment>
+
+  <Button>Submit</Button>
+</Box>
+   
+  
 };
 
 export default Form3;

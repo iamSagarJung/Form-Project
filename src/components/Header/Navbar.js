@@ -21,7 +21,7 @@ export default function Navbar() {
             setisActive(!isActive);
           }}
           role="button"
-          className={`navbar-burger burger  ${isActive ? "is-active" : ""}`}
+          className={`navbar-burger burger px-6  ${isActive ? "is-active" : ""}`}
           aria-label="menu"
           aria-expanded="false"
           data-target="navbarBasicExample"
@@ -38,22 +38,13 @@ export default function Navbar() {
         <div className="navbar-end">
           <div className="navbar-item">
             <Link className="navbar-item is-size-5" to="form1">
-              Form 1
+              HR Requirement
             </Link>
             <Link className="navbar-item is-size-5" to="form2">
-              Form 2
+              Budget  Approval
             </Link>
             <Link className="navbar-item is-size-5" to="form3">
-              Form 3
-            </Link>
-            <Link className="navbar-item is-size-5" to="form4">
-              Form 4
-            </Link>
-            <Link className="navbar-item is-size-5" to="form5">
-              Form 5
-            </Link>
-            <Link className="navbar-item is-size-5" to="form6">
-              Form 6
+              Travelling Allowance 
             </Link>
           </div>
         </div>

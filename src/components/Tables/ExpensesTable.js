@@ -14,113 +14,106 @@ const ExpensesTable = (props) => {
 
       <tr>
         <td>
-          {" "}
           <Input type="number"></Input>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="particulars"/>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="Enter Amount Here"/>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="Enter Details Here"/>
         </td>
       </tr>
 
       <tr>
         <td>
-          {" "}
           <Input type="number"></Input>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="particulars"/>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="Enter Amount Here"/>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="Enter Details Here"/>
         </td>
       </tr>
 
       <tr>
         <td>
-          {" "}
           <Input type="number"></Input>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="particulars"/>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="Enter Amount Here"/>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="Enter Details Here"/>
         </td>
       </tr>
 
       <tr>
         <td>
-          {" "}
           <Input type="number"></Input>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="particulars"/>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="Enter Amount Here"/>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="Enter Details Here"/>
         </td>
       </tr>
 
       <tr>
         <td>
-          {" "}
           <Input type="number"></Input>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="particulars"/>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="Enter Amount Here"/>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="Enter Details Here"/>
         </td>
       </tr>
 
       <tr>
         <td>
-          {" "}
           <Input type="number"></Input>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="particulars"/>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="Enter Amount Here"/>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="Enter Details Here"/>
         </td>
       </tr>
 
       <tr>
         <td>
-          {" "}
           <Input type="number"></Input>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="particulars"/>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="Enter Amount Here"/>
         </td>
         <td>
-          <Input></Input>
+          <Input placeholder="Enter Details Here"/>
         </td>
       </tr>
     </Table>

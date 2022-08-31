@@ -18,13 +18,13 @@ const InternalPurposeTable = () => {
           <Input type="date" />
         </td>
         <td>
-          <Input type="number" />
+          <Input type="number" placeholder="Enter Amount Here" />
         </td>
         <td>
           <Input type="date" />
         </td>
         <td>
-          <Input type="number" />
+          <Input type="number" placeholder="Enter Amount Here" />
         </td>
         <td>
           <Input type="number" />
@@ -36,49 +36,51 @@ const InternalPurposeTable = () => {
           <Input type="date" />
         </td>
         <td>
-          <Input type="number" />
+          <Input type="number" placeholder="Enter Amount Here" />
         </td>
         <td>
           <Input type="date" />
         </td>
         <td>
-          <Input type="number" />
+          <Input type="number" placeholder="Enter Amount Here" />
         </td>
         <td>
           <Input type="number" />
         </td>
       </tr>
 
+     
       <tr>
         <td>
           <Input type="date" />
         </td>
         <td>
-          <Input type="number" />
+          <Input type="number" placeholder="Enter Amount Here" />
         </td>
         <td>
           <Input type="date" />
         </td>
         <td>
-          <Input type="number" />
+          <Input type="number" placeholder="Enter Amount Here" />
         </td>
         <td>
           <Input type="number" />
         </td>
       </tr>
 
+     
       <tr>
         <td>
           <Input type="date" />
         </td>
         <td>
-          <Input type="number" />
+          <Input type="number" placeholder="Enter Amount Here" />
         </td>
         <td>
           <Input type="date" />
         </td>
         <td>
-          <Input type="number" />
+          <Input type="number" placeholder="Enter Amount Here" />
         </td>
         <td>
           <Input type="number" />
