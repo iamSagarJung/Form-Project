@@ -11,7 +11,7 @@ import TravelListTable from "../Tables/TravelListTable";
 
 const Form2 = () => {
   return (
-    <Box className=" px-6">
+    <Box className=" px-5">
 
     <Title className="has-text-centered">
       TRAVELLING ALLOWANCE REIMBURSEMENT/SETTLEMENT FORM
@@ -52,7 +52,7 @@ const Form2 = () => {
     <h3 className="is-underlined is-size-6 px-5 is-italic has-text-weight-semibold py-4">
       INSTRUCTIONS FOR PREPARING TRAVELLING ALLOWANCE/REIMBURSEMENT BILLS:
     </h3>
-    <ol>
+    <ol className="px-5">
       <li>
         {" "}
         Claim must be properly filled in and submitted within 15 days of
@@ -85,7 +85,7 @@ const Form2 = () => {
 
 
 {/* ---------------------------------expenses table----------------------- */}
-    <p className=" has-text-weight-bold">
+    <p className=" has-text-weight-bold my-6">
         B. Other Expenses e.g. Lodging, Fooding, Boarding, Registration fee,
         Visa fee, Insurance etc. (Only if not done by company)
       </p>
@@ -153,7 +153,7 @@ const Form2 = () => {
           <Input placeholder="Enter Name">Name</Input>
         </Column>
       </div>
-    <Button>Submit</Button>
+    <Button className="is-success" >Submit</Button>
   </Box>
   );
 };

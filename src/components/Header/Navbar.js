@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="navbar is-primary  is-fixed-top"
+      className="navbar is-light  is-fixed-top"
       role="navigation"
       aria-label="main navigation"
     >

@@ -1,122 +1,79 @@
-import React from "react";
-import Input from "../UI/Input";
-import Table from "../UI/Table";
+import React,{useState} from "react";
+import ExpenseListTabel from "../SubComponent/ExpenseListTabel";
+import Button from "../UI/Button";
 
-const ExpensesTable = (props) => {
+const ExpensesTable = () => {
+
+  const [inputList, setInputList] = useState([{}]);
+
+
+  // handle click event of the Remove button
+  const handleRemoveClick = (index) => {
+    const list = [...inputList];
+    list.splice(index, 1);
+    setInputList(list);
+  };
+
+  // handle click event of the Add button
+  const handleAddClick = () => {
+    setInputList([...inputList, {}]);
+  };
+  
   return (
-    <Table>
-      <tr className="row1 ">
-        <th>S.No.</th>
-        <th>Particulars</th>
-        <th>Amount Paid</th>
-        <th>Receipt Details</th>
-      </tr>
+    <div div className="box">
+    <div className="columns my-2">
 
-      <tr>
-        <td>
-          <Input type="number"></Input>
-        </td>
-        <td>
-          <Input placeholder="particulars"/>
-        </td>
-        <td>
-          <Input placeholder="Enter Amount Here"/>
-        </td>
-        <td>
-          <Input placeholder="Enter Details Here"/>
-        </td>
-      </tr>
+      <div className="column is-one-fourth">
+      <p className="has-text-weight-bold" >S.No.</p>
+      </div>
 
-      <tr>
-        <td>
-          <Input type="number"></Input>
-        </td>
-        <td>
-          <Input placeholder="particulars"/>
-        </td>
-        <td>
-          <Input placeholder="Enter Amount Here"/>
-        </td>
-        <td>
-          <Input placeholder="Enter Details Here"/>
-        </td>
-      </tr>
+      <div className="column is-one-fourth">
+      <p className="has-text-weight-bold" >Particulars</p>
+        </div>
 
-      <tr>
-        <td>
-          <Input type="number"></Input>
-        </td>
-        <td>
-          <Input placeholder="particulars"/>
-        </td>
-        <td>
-          <Input placeholder="Enter Amount Here"/>
-        </td>
-        <td>
-          <Input placeholder="Enter Details Here"/>
-        </td>
-      </tr>
+        <div className="column is-one-fourth">
+        <p className="has-text-weight-bold" >Amount Paid</p>
+        </div>
 
-      <tr>
-        <td>
-          <Input type="number"></Input>
-        </td>
-        <td>
-          <Input placeholder="particulars"/>
-        </td>
-        <td>
-          <Input placeholder="Enter Amount Here"/>
-        </td>
-        <td>
-          <Input placeholder="Enter Details Here"/>
-        </td>
-      </tr>
+        <div className="column is-one-fourth">
+        <p className="has-text-weight-bold" >Receipt Details</p>
+        </div>
+    </div>
 
-      <tr>
-        <td>
-          <Input type="number"></Input>
-        </td>
-        <td>
-          <Input placeholder="particulars"/>
-        </td>
-        <td>
-          <Input placeholder="Enter Amount Here"/>
-        </td>
-        <td>
-          <Input placeholder="Enter Details Here"/>
-        </td>
-      </tr>
+    <ExpenseListTabel/>
+    <ExpenseListTabel/>
+    <ExpenseListTabel/>
 
-      <tr>
-        <td>
-          <Input type="number"></Input>
-        </td>
-        <td>
-          <Input placeholder="particulars"/>
-        </td>
-        <td>
-          <Input placeholder="Enter Amount Here"/>
-        </td>
-        <td>
-          <Input placeholder="Enter Details Here"/>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <Input type="number"></Input>
-        </td>
-        <td>
-          <Input placeholder="particulars"/>
-        </td>
-        <td>
-          <Input placeholder="Enter Amount Here"/>
-        </td>
-        <td>
-          <Input placeholder="Enter Details Here"/>
-        </td>
-      </tr>
-    </Table>
+    {inputList.map((x, i) => {
+        return (
+          <div key={i}>
+               <ExpenseListTabel/>
+            <div className=" is-flex ">
+              <div className="mx-1">
+            {inputList.length - 1 === i && (
+                  <Button
+                    className="is-success is-light"
+                    onClick={handleAddClick}
+                  >
+                    Add
+                  </Button>
+                )}
+                </div>
+                {inputList.length !== 1 && (
+                  <Button
+                    className="is-danger is-light py-3 "
+                    onClick={() => handleRemoveClick(i)}
+                  >
+                    Remove
+                  </Button>
+                )}
+            
+              </div>
+          </div>
+        );
+      })}
+     
+    </div>
   );
 };
 

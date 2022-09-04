@@ -1,6 +1,6 @@
 const Table = (props) => {
   return (
-    <div className="table-container py-5 ">
+    <div className="table-container  ">
       <table className="table is-bordered is-fullwidth has-text-centered">
         <tbody>{props.children}</tbody>
       </table>

@@ -7,7 +7,7 @@ const Comment = (props) => {
         <div className="field">
           <label className="label">{props.children}</label>
           <div className="control">
-            <textarea
+            <textarea rows="10"
               className="textarea"
               placeholder={props.placeholder}
             ></textarea>

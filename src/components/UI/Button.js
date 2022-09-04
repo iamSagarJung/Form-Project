@@ -6,7 +6,8 @@ const Button = (props) => {
       <div className="field is-grouped">
         <div className="control">
           <button
-            className={`button has-background-primary px-5 mt-5 has-text-weight-bold ${props.className}`}
+            className={`button  has-text-weight-bold ${props.className}`}
+            onClick={props.onClick}
           >
             {props.children}
           </button>

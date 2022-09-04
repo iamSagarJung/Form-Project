@@ -3,16 +3,34 @@ import Input from '../UI/Input'
 
 const SubTravelList = () => {
   return (
-    <tr>
-         <td><Input type="date"/></td>
-                <td><Input placeholder="Enter Time here"/> </td>
-                <td><Input placeholder="Enter Place here"/> </td>
-                <td><Input type="date"/></td>
-                <td><Input placeholder="Enter Time here"/> </td>
-                <td><Input placeholder="Enter Place here"/> </td>
-                <td><Input placeholder="Enter Mode here"/> </td>
-                <td><Input placeholder="Enter Fare here"/> </td>
-    </tr>
+<div className="columns is-mobile">
+  <div className="column is-one-eighth">
+  <Input  type="date"/>
+  </div>
+  <div className="column is-one-eighth">
+  <Input placeholder="Enter Time"/>
+  </div>
+  <div className="column is-one-eighth">
+  <Input placeholder="Enter  place"/>
+  </div>
+  <div className="column is-one-eighth">
+  <Input type="date"/>
+  </div>
+  <div className="column is-one-eighth">
+  <Input placeholder="Enter Time"/>
+  </div>
+  <div className="column is-one-eighth">
+  <Input placeholder="Enter place"/>
+  </div>
+  <div className="column is-one-eighth">
+  <Input placeholder="Enter Mode"/>
+  </div>
+  <div className="column is-one-eighth">
+  <Input placeholder="Enter Fare"/>
+  </div>
+</div>
+  
+    
   )
 }
 

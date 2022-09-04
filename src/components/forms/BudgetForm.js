@@ -60,7 +60,7 @@ const Form3 = () => {
 {/* -----------Comments--------- */}
 <Comment>Remarks:</Comment>
 
-  <Button>Submit</Button>
+  <Button className="my-6 is-success">Submit</Button>
 </Box>
    
   
